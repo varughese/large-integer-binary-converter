@@ -1,0 +1,136 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="bs.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+
+				<div>
+					<label>Binary</label>
+					<input id="binary"></input>
+					<button onclick="convert()" class="btn btn-primary">Convert</button>
+					<button onclick="save()" class="btn btn-primary">Save</button>
+				</div>
+
+				<label>Unsigned</label>
+				<textarea rows="2" id="y" class="outtext" readonly="" tabindex="5"></textarea>
+				<label>Signed</label>
+				<textarea rows="2" id="y2" class="" readonly="" tabindex="6"></textarea>
+				<textarea rows="2" id="y3" class="hidden" readonly="" tabindex="7"></textarea>
+				<textarea rows="3" id="y4" class="hidden" readonly="" tabindex="8"></textarea>
+
+
+			</div>
+
+
+			<div class="col-md-4">
+
+				<div>
+					<div><label>A</label>
+						<input id="m1"></input></div>
+					<div><label>B</label>
+						<input id="m2"></input></div>
+
+					<button onclick="mult()" class="btn btn-primary">Multiply</button>
+				</div>
+
+				<label>Result Decimal</label>
+				<textarea rows="2" id="mult-decimal-result" class="outtext" readonly="" tabindex="5"></textarea>
+				<label>Result Binary</label>
+				<textarea rows="3" id="mult-binary-result" class="" readonly="" tabindex="8"></textarea>
+				<div>
+					<label>to compare</label>
+					<textarea rows="3" id="user-binary-result" class="" tabindex="8"></textarea>
+					<span id="is-same"></span>
+				</div>
+			</div>
+
+
+			<div class="col-md-4">
+
+				<div>
+					<div><label>A</label>
+						<input id="d1"></input></div>
+					<div><label>B</label>
+						<input id="d2"></input></div>
+
+					<button onclick="div()" class="btn btn-primary">Divide</button>
+				</div>
+
+				<label>Answer Decimal</label>
+				<textarea rows="2" id="div-decimal-result" class="outtext" readonly="" tabindex="5"></textarea>
+				<label>Quotient Binary</label>
+				<textarea rows="3" id="div-binary-q-result" class="" readonly="" tabindex="8"></textarea>
+				<label>Remainder Binary</label>
+				<textarea rows="3" id="div-binary-r-result" class="" readonly="" tabindex="8"></textarea>
+
+				<div>
+					<label>to compare</label>
+					<textarea rows="3" id="user-div-check-result" class="" tabindex="8"></textarea>
+					<span id="is-same-division"></span>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-4">
+			<div>
+				<div><label>A</label>
+					<input id="gcd1"></input></div>
+				<div><label>B</label>
+					<input id="gcd2"></input></div>
+
+				<button onclick="callGcd()" class="btn btn-primary">XGCD</button>
+			</div>
+			<label>GCD</label>
+			<textarea rows="2" id="xgcd-d-res" class="outtext" readonly="" tabindex="5"></textarea>
+			<label>x</label>
+			<textarea rows="3" id="xgcd-a-res" class="" readonly="" tabindex="8"></textarea>
+			<label>y</label>
+			<textarea rows="3" id="xgcd-b-res" class="" readonly="" tabindex="8"></textarea>
+
+		</div>
+
+
+		<div class="col-md-8">
+			<div>
+				<div><label>P</label>
+					<input id="rsa-p"></input></div>
+				<div><label>Q</label>
+					<input id="rsa-q"></input></div>
+
+				<button onclick="callRsa()" class="btn btn-primary">RSA shit</button>
+			</div>
+			<label>N</label>
+			<textarea rows="3" id="rsa-n" class="" readonly="" tabindex="8"></textarea>
+			<label>PHI N</label>
+			<textarea rows="3" id="rsa-phi_n" class="" readonly="" tabindex="8"></textarea>
+			<label>E</label>
+			<textarea rows="3" id="rsa-e" class="" readonly="" tabindex="8" placeholder='65537'></textarea>
+			<label>D</label>
+			<textarea rows="3" id="rsa-d" class="" readonly="" tabindex="8"></textarea>
+
+
+		</div>
+
+	</div>
+
+	<script src="./jquery.js""></script>
+<script src=" ./bignumber.js"> </script> <script src="app.js"></script>
+</body>
+
+</html>
